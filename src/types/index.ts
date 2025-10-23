@@ -3,7 +3,7 @@ export interface TeamMember {
   name: string;
   position: string;
   initials: string;
-  image: string;
+  image?: string;
 }
 
 export interface Program {
