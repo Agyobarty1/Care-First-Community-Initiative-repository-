@@ -12,14 +12,14 @@ export const navigationItems: NavigationItem[] = [
 ];
 
 export const teamMembers: TeamMember[] = [
-  { id: '1', name: 'Bartholomew Agyo', position: 'Executive Director', initials: 'BA' },
-  { id: '2', name: 'Kabiru Sodiq', position: 'Head of Programs', initials: 'KS' },
-  { id: '3', name: 'Kemi Amina Abdullazeez', position: 'Head Admin & HR', initials: 'KA' },
-  { id: '4', name: 'Kim Pwol Dung', position: 'Head Grants, Partnership & Consortium', initials: 'KD' },
-  { id: '5', name: 'Felix Terwase Tsebee', position: 'Head Monitoring, Evaluation, Accountability & Learning', initials: 'FT' },
-  { id: '6', name: 'Moses Tanko', position: 'Head Finance & Operations', initials: 'MT' },
-  { id: '7', name: 'Simon Obeya', position: 'Internal Control & Compliance Expert', initials: 'SO' },
-  { id: '8', name: 'Esther Omojoh Ogah', position: 'Gender Based Violence & Protection Expert', initials: 'EO' },
+  { id: '1', name: 'Bartholomew Agyo', position: 'Executive Director', initials: 'BA', image: ''},
+  { id: '2', name: 'Kabiru Sodiq', position: 'Head of Programs', initials: 'KS', image: '' },
+  { id: '3', name: 'Kemi Amina Abdullazeez', position: 'Head Admin & HR', initials: 'KA', image: '' },
+  { id: '4', name: 'Kim Pwol Dung', position: 'Head Grants, Partnership & Consortium', initials: 'KD', image: '' },
+  { id: '5', name: 'Felix Terwase Tsebee', position: 'Head Monitoring, Evaluation, Accountability & Learning', initials: 'FT', image: '' },
+  { id: '6', name: 'Moses Tanko', position: 'Head Finance & Operations', initials: 'MT', image: '' },
+  { id: '7', name: 'Simon Obeya', position: 'Internal Control & Compliance Expert', initials: 'SO', image: '' },
+  { id: '8', name: 'Esther Omojoh Ogah', position: 'Gender Based Violence & Protection Expert', initials: 'EO', image: '' },
 ];
 
 export const programs: Program[] = [

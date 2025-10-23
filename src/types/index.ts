@@ -11,6 +11,7 @@ export interface Program {
   title: string;
   description: string;
   icon?: string;
+  image?: string;
 }
 
 export interface Activity {
@@ -19,6 +20,7 @@ export interface Activity {
   description: string;
   image: string;
   alt: string;
+  
 }
 
 export interface ContactInfo {
