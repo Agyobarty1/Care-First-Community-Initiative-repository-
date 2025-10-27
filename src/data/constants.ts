@@ -12,7 +12,7 @@ export const navigationItems: NavigationItem[] = [
 ];
 
 export const teamMembers: TeamMember[] = [
-  { id: '1', name: 'Bartholomew Agyo', position: 'Executive Director', initials: 'BA', image: ''},
+  { id: '1', name: 'Bartholomew Agyo', position: 'Executive Director', initials: 'BA', image: '/assets/BathyA.jpg'},
   { id: '2', name: 'Kabiru Sodiq', position: 'Head of Programs', initials: 'KS', image: '' },
   { id: '3', name: 'Kemi Amina Abdullazeez', position: 'Head Admin & HR', initials: 'KA', image: '' },
   { id: '4', name: 'Kim Pwol Dung', position: 'Head Grants, Partnership & Consortium', initials: 'KD', image: '' },
@@ -33,6 +33,9 @@ export const programs: Program[] = [
   { id: '8', title: 'Nutrition', description: 'Preventing and treating malnutrition.' },
   { id: '9', title: 'Health', description: 'Primary healthcare and preventive services.' },
   { id: '10', title: 'Protection', description: 'Access to justice, information, advocacy, and GBV prevention.' },
+  { id: '11', title: 'Governance and Advocacy', description: 'Promoting transparency, accountability and participation.' },
+  { id: '12', title: 'Peace Building', description: 'Creating an environment where people can live without fear of violence or conflict.' },
+  { id: '13', title: 'Climate Change', description: 'Combating the long term warming of the earth through renewable energy, energy efficiency, sustainable land use and building of resilient climate change infrastructures.' },
 ];
 
 export const activities: Activity[] = [
@@ -47,7 +50,7 @@ export const activities: Activity[] = [
     id: '2',
     title: 'Education Activities',
     description: 'Education activities in Mala Sherif, Jere Local Government, Borno State.',
-    image: '/assets/img/activities/education.jpg',
+    image: '/assets/activity-4.png',
     alt: 'Education activities in Mala Sherif, Jere LGA, Borno State'
   },
   {
