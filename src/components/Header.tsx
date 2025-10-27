@@ -35,13 +35,18 @@ const Header: React.FC = () => {
           {/* Logo */}
           <a 
             href="#home" 
-            className="flex items-center space-x-3 text-brand-900 hover:text-primary-700 transition-colors"
+            className="flex items-center space-x-3 text-brand-900
+             hover:text-primary-700
+             transition-colors"
             aria-label="CFCI Home"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-700 to-secondary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">CFCI</span>
-            </div>
-            <span className="font-bold text-lg hidden sm:block">Care First Community Initiative</span>
+            <div className="w-22 h-15 flex items-center justify-center">
+              <img 
+                src="/assets/care-logo.png" 
+                alt="Care First Community Initiative Logo" 
+                className="w-full h-full object-contain"
+              />
+            </div>            
           </a>
 
           {/* Desktop Navigation */}

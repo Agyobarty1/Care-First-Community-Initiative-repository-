@@ -25,20 +25,16 @@ const SMT: React.FC = () => {
               transition-all duration-300 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Profile Image or Initials */}
+              {/* Profile Image or Placeholder */}
               <div className="w-32 h-32 bg-gradient-to-br from-primary-500 to-secondary-500 
                 rounded-2xl flex items-center justify-center text-white text-2xl font-bold 
                 mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg overflow-hidden"
               >
-                {member.image ? (
-                  <img
-                    src={'assets/activity-1.png'}
-                    alt={member.name}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                  />
-                ) : (
-                  member.initials
-                )}
+                <img
+                  src={member.image || '/assets/BathyA.jpg'}
+                  alt={member.name}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
               {/* Name */}

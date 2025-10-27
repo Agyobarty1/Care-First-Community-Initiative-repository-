@@ -46,13 +46,9 @@ const Hero: React.FC = () => {
           <div className="relative animate-slide-up">
             <div className="relative">
               <img 
-                src="/assets/img/hero.jpg" 
+                src="/assets/activity-3.png" 
                 alt="Community empowerment and humanitarian assistance"
                 className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/assets/img/placeholders/hero-placeholder.jpg';
-                }}
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
