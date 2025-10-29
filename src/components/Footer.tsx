@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
               
               <div className="flex space-x-4">
                 <a 
-                  href="#" 
+                  href="https://web.facebook.com/profile.php?id=61582939260043" 
                   className="w-10 h-10 bg-brand-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
                   aria-label="Facebook"
                 >
@@ -45,16 +45,16 @@ const Footer: React.FC = () => {
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/cfcinitiative.org2/" 
                   className="w-10 h-10 bg-brand-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
-                  aria-label="Twitter"
+                  aria-label="Instagram"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm10 2H7a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3zm-5 3.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm0 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM18 6.25a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" 
                   className="w-10 h-10 bg-brand-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
                   aria-label="LinkedIn"
                 >
