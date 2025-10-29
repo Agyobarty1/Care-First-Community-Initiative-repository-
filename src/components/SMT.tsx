@@ -28,10 +28,10 @@ const SMT: React.FC = () => {
               {/* Profile Image or Placeholder */}
               <div className="w-32 h-32 bg-gradient-to-br from-primary-500 to-secondary-500 
                 rounded-2xl flex items-center justify-center text-white text-2xl font-bold 
-                mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg overflow-hidden"
+                mx-auto mb-6 group-hover:scale-105 transition-transform duration-200 shadow-lg overflow-hidden"
               >
                 <img
-                  src={member.image || '/assets/BathyA.jpg'}
+                  src={member.image || '/assets/kabiru.jpg'}
                   alt={member.name}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
                 />

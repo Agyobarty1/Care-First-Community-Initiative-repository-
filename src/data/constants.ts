@@ -12,14 +12,14 @@ export const navigationItems: NavigationItem[] = [
 ];
 
 export const teamMembers: TeamMember[] = [
-  { id: '1', name: 'Bartholomew Agyo', position: 'Executive Director', initials: 'BA', image: '/assets/BathyA.jpg'},
-  { id: '2', name: 'Kabiru Sodiq', position: 'Head of Programs', initials: 'KS', image: '' },
+  { id: '1', name: 'Bartholomew Agyo', position: 'Executive Director', initials: 'BA', image: '/assets/baty.png'},
+  { id: '2', name: 'Kabiru Sodiq', position: 'Head of Programs', initials: 'KS', image: '/assets/kabiru.jpg' },
   { id: '3', name: 'Kemi Amina Abdullazeez', position: 'Head Admin & HR', initials: 'KA', image: '' },
-  { id: '4', name: 'Kim Pwol Dung', position: 'Head Grants, Partnership & Consortium', initials: 'KD', image: '' },
-  { id: '5', name: 'Felix Terwase Tsebee', position: 'Head Monitoring, Evaluation, Accountability & Learning', initials: 'FT', image: '' },
-  { id: '6', name: 'Moses Tanko', position: 'Head Finance & Operations', initials: 'MT', image: '' },
-  { id: '7', name: 'Simon Obeya', position: 'Internal Control & Compliance Expert', initials: 'SO', image: '' },
-  { id: '8', name: 'Esther Omojoh Ogah', position: 'Gender Based Violence & Protection Expert', initials: 'EO', image: '' },
+  { id: '4', name: 'Kim Pwol Dung', position: 'Head Grants, Partnership & Consortium', initials: 'KD', image: '/assets/kabiru.jpg' },
+  { id: '5', name: 'Felix Terwase Tsebee', position: 'Head Monitoring, Evaluation, Accountability & Learning', initials: 'FT', image: '/assets/felix.jpg' },
+  { id: '6', name: 'Moses Tanko', position: 'Head Finance & Operations', initials: 'MT', image: '/assets/moses.png' },
+  { id: '7', name: 'Simon Obeya', position: 'Internal Control & Compliance Expert', initials: 'SO', image: '/assets/kabiru.jpg' },
+  { id: '8', name: 'Esther Omojoh Ogah', position: 'Gender Based Violence & Protection Expert', initials: 'EO', image: '/assets/kabiru.jpg' },
 ];
 
 export const programs: Program[] = [
@@ -43,7 +43,7 @@ export const activities: Activity[] = [
     id: '1',
     title: 'Hand Washing Awareness',
     description: 'CFCI carrying out awareness creation on the importance of hand washing.',
-    image: '/assets/img/activities/handwashing.jpg',
+    image: '/assets/activity-5.png',
     alt: 'CFCI awareness creation on the importance of hand washing'
   },
   {
@@ -57,7 +57,7 @@ export const activities: Activity[] = [
     id: '3',
     title: 'Housing, Land and Property Awareness',
     description: 'Awareness creation on Housing, Land and Property with stakeholders of displaced persons in Isa Gamai, Dusuman ward, Jere LGA.',
-    image: '/assets/img/activities/hlp-stakeholders.jpg',
+    image: '/assets/activity-2.png',
     alt: 'Awareness on Housing, Land and Property with stakeholders in Isa Gamai, Dusuman ward, Jere LGA'
   },
 ];
