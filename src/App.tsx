@@ -9,7 +9,6 @@ import SMT from '@/components/SMT';
 import Activities from '@/components/Activities';
 import Organogram from '@/components/Organogram';
 import Contact from '@/components/Contact';
-import Donate from '@/components/Donate';
 import Footer from '@/components/Footer';
 
 const App: React.FC = () => {
@@ -26,7 +25,6 @@ const App: React.FC = () => {
         <Activities />
         <Organogram />
         <Contact />
-        <Donate />
       </main>
       <Footer />
     </div>
