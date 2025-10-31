@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" 
+                  href="https://www.linkedin.com/in/care-first-community-initiative-cfci-a09aa2396/" 
                   className="w-10 h-10 bg-brand-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
                   aria-label="LinkedIn"
                 >
