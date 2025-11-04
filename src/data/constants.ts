@@ -19,7 +19,7 @@ export const teamMembers: TeamMember[] = [
   { id: '5', name: 'Felix Terwase Tsebee', position: 'Head Monitoring, Evaluation, Accountability & Learning', initials: 'FT', image: '/assets/felix.jpg' },
   { id: '6', name: 'Moses Tanko', position: 'Head Finance & Operations', initials: 'MT', image: '/assets/tko.png' },
   { id: '7', name: 'Simon Obeya', position: 'Internal Control & Compliance Expert', initials: 'SO', image: '/assets/Obeya.png'},
-  { id: '8', name: 'Esther Omojoh Ogah', position: 'Gender Based Violence & Protection Expert', initials: 'EO', image: '/assets/kabiru.jpg' },
+  { id: '8', name: 'Esther Omojoh Ogah', position: 'Gender Based Violence & Protection Expert', initials: 'EO', image: '/assets/Ogah.jpg' },
 ];
 
 export const programs: Program[] = [
