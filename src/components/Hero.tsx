@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230369a1' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
       </div>
-      
+
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -20,21 +20,21 @@ const Hero: React.FC = () => {
                 <span className="text-gradient">poverty and social deprivation</span>
               </h1>
               <p className="text-lg md:text-xl text-brand-600 leading-relaxed max-w-2xl">
-                We mitigate the impact of poverty and social deprivation among vulnerable groups 
-                through provision of innovative and sustainable social empowerment services that 
+                We mitigate the impact of poverty and social deprivation among vulnerable groups
+                through provision of innovative and sustainable social empowerment services that
                 enhance human rights and dignity.
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="#about" 
+              <a
+                href="#about"
                 className="btn btn-primary text-base px-8 py-4"
               >
                 Learn More
               </a>
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="btn btn-outline text-base px-8 py-4"
               >
                 Get in Touch
@@ -45,15 +45,15 @@ const Hero: React.FC = () => {
           {/* Hero Image */}
           <div className="relative animate-slide-up">
             <div className="relative">
-              <img 
-                src="/assets/activity-3.png" 
+              <img
+                src="/assets/activity-5.png"
                 alt="Community empowerment and humanitarian assistance"
                 className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
             </div>
-            
+
             {/* Floating cards */}
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-brand-200">
               <div className="flex items-center space-x-3">
@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="absolute -top-6 -right-6 bg-white rounded-xl shadow-lg p-4 border border-brand-200">
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">

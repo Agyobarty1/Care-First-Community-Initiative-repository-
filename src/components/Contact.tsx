@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { contactInfo } from '@/data/constants';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -7,21 +8,59 @@ const Contact: React.FC = () => {
     email: '',
     message: ''
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    
+    // Map EmailJS field names to state
+    const fieldMap: { [key: string]: keyof typeof formData } = {
+      'from_name': 'name',
+      'from_email': 'email',
+      'message': 'message'
+    };
+    
+    const stateField = fieldMap[name] || name as keyof typeof formData;
+    
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [stateField]: value
     }));
+    
+    // Clear any previous status when user starts typing
+    if (submitStatus !== 'idle') {
+      setSubmitStatus('idle');
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    
+    if (!formRef.current) return;
+    
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_px0aogl', 
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_26gbwzp', 
+        formRef.current, 
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'd7pLCBVqgIF9CC3lg'
+      );
+      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      formRef.current.reset();
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -116,7 +155,7 @@ const Contact: React.FC = () => {
               Send us a Message
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-brand-900 mb-2">
                   Full Name *
@@ -124,10 +163,12 @@ const Contact: React.FC = () => {
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="from_name"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
+                  minLength={2}
+                  maxLength={100}
                   className="w-full px-4 py-3 border border-brand-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                   placeholder="Enter your full name"
                 />
@@ -140,7 +181,7 @@ const Contact: React.FC = () => {
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="from_email"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -165,11 +206,49 @@ const Contact: React.FC = () => {
                 />
               </div>
 
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p className="text-green-800 font-medium">Message sent successfully!</p>
+                  </div>
+                  <p className="text-green-700 text-sm mt-1">We'll get back to you within 24 hours.</p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p className="text-red-800 font-medium">Failed to send message</p>
+                  </div>
+                  <p className="text-red-700 text-sm mt-1">Please try again or contact us directly.</p>
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full btn btn-primary"
+                disabled={isSubmitting}
+                className={`w-full btn btn-primary ${
+                  isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
+                }`}
               >
-                Send Message
+                {isSubmitting ? (
+                  <div className="flex items-center justify-center space-x-2">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>Sending...</span>
+                  </div>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
           </div>
