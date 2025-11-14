@@ -37,7 +37,7 @@ const MissionVisionMandate: React.FC = () => {
   ];
 
   return (
-    <section id="mvm" className="section-padding bg-gradient-to-br from-secondary-50 to-primary-50">
+    <section id="mvm" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-4">
@@ -72,7 +72,7 @@ const MissionVisionMandate: React.FC = () => {
         </div>
 
         {/* Registration Info */}
-        <div className="mt-16 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl p-8 border border-primary-200">
+        <div className="mt-16 bg-[rgb(138,201,9)] rounded-2xl p-8 border border-white/20">
           <div className="text-center">
             <div className="inline-flex items-center space-x-2 bg-white rounded-full px-4 py-2 mb-4 shadow-sm">
               <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

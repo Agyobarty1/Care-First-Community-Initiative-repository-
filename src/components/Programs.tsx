@@ -79,7 +79,7 @@ const Programs: React.FC = () => {
   };
 
   return (
-    <section id="programs" className="section-padding bg-gradient-to-br from-secondary-50 to-primary-100">
+    <section id="programs" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-4">
@@ -115,7 +115,7 @@ const Programs: React.FC = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl p-8 border border-primary-200">
+          <div className="bg-[rgb(138,201,9)] rounded-2xl p-8 border border-white/20">
             <h3 className="text-xl font-bold text-brand-900 mb-4">
               Interested in Our Programs?
             </h3>

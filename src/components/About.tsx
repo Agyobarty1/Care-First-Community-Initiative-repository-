@@ -9,7 +9,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gradient-to-br from-primary-50 to-secondary-100">
+    <section id="about" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}

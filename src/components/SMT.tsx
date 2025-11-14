@@ -3,7 +3,7 @@ import { teamMembers } from '@/data/constants';
 
 const SMT: React.FC = () => {
   return (
-    <section id="smt" className="section-padding bg-gradient-to-br from-secondary-100 to-primary-50">
+    <section id="smt" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">

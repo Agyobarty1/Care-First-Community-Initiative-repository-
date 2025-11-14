@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-br from-primary-100 to-secondary-50">
+    <section id="contact" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-4">

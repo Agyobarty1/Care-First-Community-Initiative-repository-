@@ -50,7 +50,7 @@ const CoreValues: React.FC = () => {
   };
 
   return (
-    <section id="values" className="section-padding bg-gradient-to-br from-primary-100 to-secondary-50">
+    <section id="values" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-4">
@@ -81,7 +81,7 @@ const CoreValues: React.FC = () => {
         </div>
 
         {/* Values Statement */}
-        <div className="mt-16 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
+        <div className="mt-16 bg-[rgb(138,201,9)] rounded-2xl p-8 text-white">
           <div className="text-center max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">
               Values in Action

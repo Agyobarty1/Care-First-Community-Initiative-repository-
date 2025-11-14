@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-100 via-secondary-50 to-primary-50">
+    <section id="home" className="relative min-h-screen flex items-center bg-[rgb(138,201,9)]">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-50">
         <div className="absolute inset-0" style={{

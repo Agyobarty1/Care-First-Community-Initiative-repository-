@@ -2,7 +2,7 @@ import React from 'react';
 
 const Organogram: React.FC = () => {
   return (
-    <section id="organogram" className="section-padding bg-gradient-to-br from-secondary-50 to-primary-100">
+    <section id="organogram" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
