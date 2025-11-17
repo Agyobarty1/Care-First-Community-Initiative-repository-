@@ -6,10 +6,10 @@ const Activities: React.FC = () => {
     <section id="activities" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Activities
           </h2>
-          <p className="text-lg text-brand-600 max-w-3xl mx-auto">
+          <p className="text-lg text-white max-w-3xl mx-auto">
             See CFCI in action through our community engagement, awareness campaigns, 
             and capacity building initiatives across Nigeria.
           </p>
@@ -20,15 +20,15 @@ const Activities: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-brand-900 mb-3">
+                <h3 className="text-xl font-bold text-black mb-3">
                   Safeguarding Commitment
                 </h3>
-                <p className="text-brand-700 leading-relaxed">
+                <p className="text-black leading-relaxed">
                   Care First Community Initiative (CFCI) is firmly committed to safeguarding the dignity, rights, and well-being of all individuals, particularly children, women, persons with disabilities, the elderly, and other vulnerable groups. We maintain strict safeguarding standards and procedures to prevent and respond to all forms of abuse, exploitation, and neglect. CFCI ensures that all staff, volunteers, and partners uphold these principles with integrity, accountability, and professionalism in every aspect of our work.
                 </p>
               </div>
@@ -66,7 +66,7 @@ const Activities: React.FC = () => {
               
               {/* Content */}
               <div className="p-6">
-                <p className="text-brand-600 leading-relaxed">
+                <p className="text-black leading-relaxed">
                   {activity.description}
                 </p>
                 

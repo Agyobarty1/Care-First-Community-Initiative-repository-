@@ -67,10 +67,10 @@ const Contact: React.FC = () => {
     <section id="contact" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Contact Us
           </h2>
-          <p className="text-lg text-brand-600 max-w-3xl mx-auto">
+          <p className="text-lg text-white max-w-3xl mx-auto">
             Get in touch with us to learn more about our programs, partnerships, 
             or how you can support our mission.
           </p>
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-brand-900 mb-6">
+              <h3 className="text-2xl font-bold text-white mb-6">
                 Get in Touch
               </h3>
               
@@ -94,13 +94,13 @@ const Contact: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-bold text-brand-900 mb-2">Phone Numbers</h4>
+                    <h4 className="font-bold text-white mb-2">Phone Numbers</h4>
                     <div className="space-y-1">
                       {contactInfo.phone.map((phone, index) => (
                         <a 
                           key={index}
                           href={`tel:${phone}`}
-                          className="block text-primary-700 hover:text-primary-800 transition-colors"
+                          className="block text-white hover:text-white transition-colors"
                         >
                           {phone}
                         </a>
@@ -117,10 +117,10 @@ const Contact: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-bold text-brand-900 mb-2">Email</h4>
+                    <h4 className="font-bold text-white mb-2">Email</h4>
                     <a 
                       href={`mailto:${contactInfo.email}`}
-                      className="text-secondary-700 hover:text-secondary-800 transition-colors"
+                      className="text-white hover:text-white transition-colors"
                     >
                       {contactInfo.email}
                     </a>

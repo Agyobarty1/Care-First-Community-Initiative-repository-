@@ -1,99 +1,187 @@
 import React from 'react';
 
+type OfficerNode = {
+  title: string;
+  teams?: string[];
+};
+
+type ManagerNode = {
+  title: string;
+  officers: OfficerNode[];
+};
+
+const managerStructure: ManagerNode[] = [
+  {
+    title: 'Programs Manager',
+    officers: [
+      {
+        title: 'Field Officers',
+        teams: ['Team Leads', 'Field Monitors']
+      }
+    ]
+  },
+  {
+    title: 'Gender/Protection Manager',
+    officers: [
+      {
+        title: 'Gender/Protection Officer',
+        teams: ['MHPSS Officer', 'Protection/MHPSS Monitors']
+      }
+    ]
+  },
+  {
+    title: 'Logistic/Supply Chain Manager',
+    officers: [
+      {
+        title: 'Logistic Officer',
+        teams: ['Logistic Assistants', 'Drivers']
+      }
+    ]
+  },
+  {
+    title: 'Warehouse Manager',
+    officers: [
+      {
+        title: 'Warehouse Officer',
+        teams: ['Warehouse Assistants', 'Store Clerks']
+      }
+    ]
+  },
+  {
+    title: 'Admin/Finance Manager',
+    officers: [
+      {
+        title: 'Admin/HR Officer',
+        teams: ['Admin/HR Assistants', 'Cleaners/Security']
+      },
+      {
+        title: 'Finance Officer',
+        teams: ['Finance Assistants', 'Cashiers']
+      }
+    ]
+  },
+  {
+    title: 'MEAL Manager',
+    officers: [
+      {
+        title: 'MEAL Officer',
+        teams: ['MEAL Assistants', 'Data Assistants']
+      }
+    ]
+  }
+];
+
+const ManagerColumn: React.FC<ManagerNode> = ({ title, officers }) => (
+  <div className="flex flex-col items-center gap-4" key={title}>
+    <div className="h-6 w-0.5 bg-black" />
+    <div className="w-full max-w-[260px] rounded-xl bg-[#F47F1F] text-white px-5 py-4 text-center font-semibold shadow-md border-2 border-black">
+      {title}
+    </div>
+    <div className="flex flex-col w-full max-w-[240px] gap-4">
+      {officers.map((officer) => (
+        <div key={officer.title} className="flex flex-col items-center gap-3">
+          <div className="h-6 w-0.5 bg-black" />
+          <div className="w-full rounded-xl bg-[#2563EB] text-white px-5 py-3 text-center font-semibold shadow border border-black">
+            {officer.title}
+          </div>
+          {officer.teams && officer.teams.length > 0 && (
+            <div className="flex flex-col gap-3 w-full max-w-[220px]">
+              {officer.teams.map((team) => (
+                <div key={team} className="flex flex-col items-center gap-2">
+                  <div className="h-4 w-0.5 bg-black" />
+                  <div className="w-full rounded-xl bg-[#7C3AED] text-white px-4 py-2 text-center text-sm font-semibold shadow border border-black">
+                    {team}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 const Organogram: React.FC = () => {
   return (
     <section id="organogram" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-900">
-              Organizational Structure
-            </h2>
-            <p className="text-lg text-brand-600 leading-relaxed">
-              Our organizational structure reflects our commitment to transparency, 
-              accountability, and effective governance. The organogram below shows 
-              how we organize our teams and reporting relationships to maximize 
-              our impact and efficiency.
-            </p>
-            
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-brand-900">Key Departments:</h3>
-              <ul className="space-y-2 text-brand-700">
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
-                  <span>Executive Leadership</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
-                  <span>Programs & Operations</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
-                  <span>Finance & Administration</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
-                  <span>Monitoring & Evaluation</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
-                  <span>Partnerships & Grants</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Instructions */}
-            <div className="bg-brand-50 rounded-xl p-6 border border-brand-200">
-              <h4 className="font-bold text-brand-900 mb-3">Image Replacement Instructions:</h4>
-              <ul className="text-sm text-brand-700 space-y-2">
-                <li>• Replace <code className="bg-white px-2 py-1 rounded text-xs">/assets/img/organogram.png</code> with your organogram image</li>
-                <li>• Recommended format: PNG, JPG, or SVG</li>
-                <li>• Recommended dimensions: 1200x800px or similar 3:2 aspect ratio</li>
-                <li>• Ensure text is readable at different screen sizes</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Organogram Image */}
-          <div className="relative">
-            <div className="card p-6">
-              <div className="aspect-[3/2] bg-gradient-to-br from-brand-50 to-primary-50 rounded-xl border-2 border-dashed border-brand-300 flex items-center justify-center">
-                <img 
-                  src="/assets/img/organogram.png" 
-                  alt="CFCI Organizational Structure"
-                  className="max-w-full max-h-full object-contain rounded-lg"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    const placeholder = target.nextElementSibling as HTMLElement;
-                    if (placeholder) placeholder.style.display = 'flex';
-                  }}
-                />
-                <div 
-                  className="hidden flex-col items-center justify-center text-center p-8"
-                  style={{ display: 'none' }}
-                >
-                  <svg className="w-16 h-16 text-brand-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
-                  <h3 className="text-lg font-bold text-brand-700 mb-2">Organogram Placeholder</h3>
-                  <p className="text-brand-600 text-sm">
-                    Replace this with your organizational structure diagram
-                  </p>
+        <div className="w-full overflow-x-auto">
+          <div className="min-w-[1024px] flex flex-col items-center gap-16">
+          {/* Top Section */}
+          <div className="w-full flex justify-center">
+            <div className="w-full max-w-6xl">
+              <div className="grid grid-cols-[auto_minmax(140px,220px)_minmax(520px,1fr)] gap-x-0 gap-y-12 items-center">
+                <div className="w-[230px] h-[82px] rounded-xl bg-[#1D4ED8] text-white px-6 text-center font-semibold shadow-md border-2 border-black flex items-center justify-center lg:mr-6">
+                  Board of Trustees
+                </div>
+                <div className="w-full h-0.5 bg-black relative lg:-mr-4">
+                  <span className="absolute left-0 -top-2 border-y-[7px] border-y-transparent border-l-[14px] border-l-black rotate-180" />
+                </div>
+                <div className="row-span-2 relative">
+                  <div className="relative bg-[#d1d5db] border-2 border-black rounded-[32px] px-10 py-10 text-center shadow-xl w-full min-w-[520px] min-h-[260px] flex flex-col justify-center">
+                    <svg
+                      className="absolute inset-0 w-full h-full pointer-events-none hidden sm:block"
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="none"
+                    >
+                      <polyline
+                        points="0,20 55,20 55,50 70,50"
+                        fill="none"
+                        stroke="black"
+                        strokeWidth="2.5"
+                      />
+                      <polyline
+                        points="0,80 55,80 55,50 70,50"
+                        fill="none"
+                        stroke="black"
+                        strokeWidth="2.5"
+                      />
+                    </svg>
+                    <p className="text-2xl font-bold text-black tracking-wide uppercase relative z-10">
+                      General Assembly
+                    </p>
+                    <div className="mt-8 flex justify-center relative z-10">
+                      <div className="w-56 rounded-lg border-2 border-black bg-white px-6 py-3 font-semibold text-black">
+                        Advisors
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-[230px] h-[82px] rounded-xl bg-[#22C55E] text-white px-6 text-center font-semibold shadow-md border-2 border-black flex items-center justify-center lg:mr-6">
+                  Executive Director
+                </div>
+                <div className="w-full h-0.5 bg-black relative lg:-mr-4">
+                  <span className="absolute left-0 -top-2 border-y-[7px] border-y-transparent border-l-[14px] border-l-black rotate-180" />
                 </div>
               </div>
             </div>
-            
-            {/* Download button */}
-            <div className="mt-4 text-center">
-              <button className="btn btn-outline text-sm">
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                Download Organogram
-              </button>
+          </div>
+
+          {/* Connector from General Assembly to Head of Operations */}
+          <div className="w-full max-w-6xl flex justify-center">
+            <div className="h-8 w-0.5 bg-black" />
+          </div>
+
+          {/* Head of Operations + Managers */}
+          <div className="w-full max-w-6xl mx-auto">
+            <div className="flex flex-col items-center gap-6">
+              <div className="h-6 w-0.5 bg-black" />
+              <div className="w-full max-w-[300px] rounded-xl bg-[#F47F1F] text-white px-6 py-4 text-center font-semibold shadow-md border-2 border-black">
+                Head of Operations
+              </div>
+              <div className="h-6 w-0.5 bg-black" />
             </div>
+
+            <div className="relative w-full mt-4">
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-black" />
+              <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-10 pt-6">
+                {managerStructure.map((manager) => (
+                  <ManagerColumn key={manager.title} {...manager} />
+                ))}
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>

@@ -53,10 +53,10 @@ const CoreValues: React.FC = () => {
     <section id="values" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Core Values
           </h2>
-          <p className="text-lg text-brand-600 max-w-3xl mx-auto">
+          <p className="text-lg text-white max-w-3xl mx-auto">
             These fundamental principles guide every decision we make and every action we take 
             in service of our communities.
           </p>
@@ -69,11 +69,11 @@ const CoreValues: React.FC = () => {
               className="card p-6 text-center group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center text-black mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 {getValueIcon(value.name)}
               </div>
               
-              <h3 className="text-lg font-bold text-brand-900 group-hover:text-primary-700 transition-colors">
+              <h3 className="text-lg font-bold text-black group-hover:text-black transition-colors">
                 {value.name}
               </h3>
             </div>
