@@ -57,7 +57,7 @@ export const activities: Activity[] = [
     id: '3',
     title: 'Housing, Land and Property Awareness',
     description: 'Awareness creation on Housing, Land and Property with stakeholders of displaced persons in Isa Gamai, Dusuman ward, Jere LGA.',
-    image: '/assets/activity-5.png',
+    image: '/assets/activity-6.png',
     alt: 'Awareness on Housing, Land and Property with stakeholders in Isa Gamai, Dusuman ward, Jere LGA'
   },
 ];

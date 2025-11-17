@@ -55,7 +55,7 @@ const Header: React.FC = () => {
               <a
                 key={item.id}
                 href={item.href}
-                className="text-brand-700 hover:text-primary-700 font-medium transition-colors duration-200"
+                className="text-black hover:text-black font-medium transition-colors duration-200"
               >
                 {item.label}
               </a>
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
                 key={item.id}
                 href={item.href}
                 onClick={closeMenu}
-                className="block px-4 py-3 text-brand-700 hover:text-primary-700 hover:bg-brand-50 rounded-lg font-medium transition-colors duration-200"
+                className="block px-4 py-3 text-black hover:text-black hover:bg-brand-50 rounded-lg font-medium transition-colors duration-200"
               >
                 {item.label}
               </a>

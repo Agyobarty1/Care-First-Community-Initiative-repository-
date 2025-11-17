@@ -79,13 +79,13 @@ const Programs: React.FC = () => {
   };
 
   return (
-    <section id="programs" className="section-padding bg-gradient-to-br from-secondary-50 to-primary-100">
+    <section id="programs" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Programs & Focus Areas
           </h2>
-          <p className="text-lg text-brand-600 max-w-3xl mx-auto">
+          <p className="text-lg text-white max-w-3xl mx-auto">
             Our comprehensive approach covers multiple sectors to address the diverse needs 
             of vulnerable communities and create sustainable impact.
           </p>
@@ -98,15 +98,15 @@ const Programs: React.FC = () => {
               className="card p-6 group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center text-black mb-4 group-hover:scale-110 transition-transform duration-300">
                 {getProgramIcon(program.title)}
               </div>
               
-              <h3 className="text-lg font-bold text-brand-900 mb-3 group-hover:text-primary-700 transition-colors">
+              <h3 className="text-lg font-bold text-black mb-3 group-hover:text-black transition-colors">
                 {program.title}
               </h3>
               
-              <p className="text-brand-600 text-sm leading-relaxed">
+              <p className="text-black text-sm leading-relaxed">
                 {program.description}
               </p>
             </div>
@@ -115,11 +115,11 @@ const Programs: React.FC = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl p-8 border border-primary-200">
-            <h3 className="text-xl font-bold text-brand-900 mb-4">
+          <div className="bg-[rgb(138,201,9)] rounded-2xl p-8 border border-white/20">
+            <h3 className="text-xl font-bold text-white mb-4">
               Interested in Our Programs?
             </h3>
-            <p className="text-brand-600 mb-6 max-w-2xl mx-auto">
+            <p className="text-white mb-6 max-w-2xl mx-auto">
               Learn more about how we implement these programs and their impact on communities across Nigeria.
             </p>
             <a 

@@ -3,14 +3,14 @@ import { teamMembers } from '@/data/constants';
 
 const SMT: React.FC = () => {
   return (
-    <section id="smt" className="section-padding bg-gradient-to-br from-secondary-100 to-primary-50">
+    <section id="smt" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-brand-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Senior Management Team
           </h1>
-          <p className="text-lg text-brand-600 max-w-3xl mx-auto">
+          <p className="text-lg text-white max-w-3xl mx-auto">
             Our leadership team brings together diverse expertise and unwavering commitment 
             to drive CFCI's mission forward.
           </p>
@@ -27,7 +27,7 @@ const SMT: React.FC = () => {
             >
               {/* Profile Image or Placeholder */}
               <div className="w-32 h-32 bg-gradient-to-br from-primary-500 to-secondary-500 
-                rounded-2xl flex items-center justify-center text-white text-2xl font-bold 
+                rounded-2xl flex items-center justify-center text-black text-2xl font-bold 
                 mx-auto mb-6 group-hover:scale-105 transition-transform duration-200 shadow-lg overflow-hidden"
               >
                 <img
@@ -38,12 +38,12 @@ const SMT: React.FC = () => {
               </div>
 
               {/* Name */}
-              <h3 className="text-xl font-bold text-brand-900 mb-3 group-hover:text-primary-700 transition-colors">
+              <h3 className="text-xl font-bold text-black mb-3 group-hover:text-black transition-colors">
                 {member.name}
               </h3>
               
               {/* Position */}
-              <p className="text-brand-600 text-sm leading-relaxed">
+              <p className="text-black text-sm leading-relaxed">
                 {member.position}
               </p>
             </div>
@@ -53,26 +53,26 @@ const SMT: React.FC = () => {
         {/* Leadership Statement */}
         <div className="mt-16 bg-gradient-to-r from-brand-50 to-primary-50 rounded-2xl p-8 border border-primary-200">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-2xl font-bold text-brand-900 mb-4">
+            <h1 className="text-2xl font-bold text-black mb-4">
               Leadership Excellence
             </h1>
-            <p className="text-brand-700 leading-relaxed mb-6">
+            <p className="text-black leading-relaxed mb-6">
               Our Senior Management Team combines decades of experience in humanitarian work, 
               development programming, and organizational leadership. Each member brings unique 
               expertise while sharing a common commitment to CFCI's values and mission.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-2xl font-bold text-primary-700 mb-2">8</div>
-                <div className="text-sm text-brand-600">Leadership Team Members</div>
+                <div className="text-2xl font-bold text-black mb-2">8</div>
+                <div className="text-sm text-black">Leadership Team Members</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-secondary-700 mb-2">50+</div>
-                <div className="text-sm text-brand-600">Combined Years Experience</div>
+                <div className="text-2xl font-bold text-black mb-2">50+</div>
+                <div className="text-sm text-black">Combined Years Experience</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-brand-700 mb-2">100%</div>
-                <div className="text-sm text-brand-600">Commitment to Mission</div>
+                <div className="text-2xl font-bold text-black mb-2">100%</div>
+                <div className="text-sm text-black">Commitment to Mission</div>
               </div>
             </div>
           </div>
