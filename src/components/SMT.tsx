@@ -63,11 +63,11 @@ const SMT: React.FC = () => {
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-2xl font-bold text-black mb-2">8</div>
+                <div className="text-2xl font-bold text-black mb-2">7</div>
                 <div className="text-sm text-black">Leadership Team Members</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-black mb-2">50+</div>
+                <div className="text-2xl font-bold text-black mb-2">30+</div>
                 <div className="text-sm text-black">Combined Years Experience</div>
               </div>
               <div>
