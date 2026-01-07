@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Download } from 'lucide-react';
 
 type OfficerNode = {
   title: string;
@@ -103,85 +104,128 @@ const ManagerColumn: React.FC<ManagerNode> = ({ title, officers }) => (
 );
 
 const Organogram: React.FC = () => {
+  const chartRef = useRef<HTMLDivElement>(null);
+
+  const handleDownload = async () => {
+    if (!chartRef.current) return;
+
+    try {
+      const html2canvas = (await import('html2canvas')).default;
+      const canvas = await html2canvas(chartRef.current, {
+        scale: 2,
+        backgroundColor: '#8AC909',
+        logging: false,
+        useCORS: true,
+      });
+
+      const link = document.createElement('a');
+      link.download = 'Care-First-Organogram.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    } catch (error) {
+      console.error('Error generating organogram:', error);
+      alert('Failed to download organogram. Please try again.');
+    }
+  };
+
   return (
     <section id="organogram" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
-        <div className="w-full overflow-x-auto">
-          <div className="min-w-[1024px] flex flex-col items-center gap-16">
-          {/* Top Section */}
-          <div className="w-full flex justify-center">
-            <div className="w-full max-w-6xl">
-              <div className="grid grid-cols-[auto_minmax(140px,220px)_minmax(520px,1fr)] gap-x-0 gap-y-12 items-center">
-                <div className="w-[230px] h-[82px] rounded-xl bg-[#1D4ED8] text-white px-6 text-center font-semibold shadow-md border-2 border-black flex items-center justify-center lg:mr-6">
-                  Board of Trustees
-                </div>
-                <div className="w-full h-0.5 bg-black relative lg:-mr-4">
-                  <span className="absolute left-0 -top-2 border-y-[7px] border-y-transparent border-l-[14px] border-l-black rotate-180" />
-                </div>
-                <div className="row-span-2 relative">
-                  <div className="relative bg-[#d1d5db] border-2 border-black rounded-[32px] px-10 py-10 text-center shadow-xl w-full min-w-[520px] min-h-[260px] flex flex-col justify-center">
-                    <svg
-                      className="absolute inset-0 w-full h-full pointer-events-none hidden sm:block"
-                      viewBox="0 0 100 100"
-                      preserveAspectRatio="none"
-                    >
-                      <polyline
-                        points="0,20 55,20 55,50 70,50"
-                        fill="none"
-                        stroke="black"
-                        strokeWidth="2.5"
-                      />
-                      <polyline
-                        points="0,80 55,80 55,50 70,50"
-                        fill="none"
-                        stroke="black"
-                        strokeWidth="2.5"
-                      />
-                    </svg>
-                    <p className="text-2xl font-bold text-black tracking-wide uppercase relative z-10">
-                      General Assembly
-                    </p>
-                    <div className="mt-8 flex justify-center relative z-10">
-                      <div className="w-56 rounded-lg border-2 border-black bg-white px-6 py-3 font-semibold text-black">
-                        Advisors
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Organizational Structure
+          </h2>
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+            Download our complete organizational chart to view the structure and hierarchy of Care First Community Initiative
+          </p>
+          <button
+            onClick={handleDownload}
+            className="inline-flex items-center gap-3 bg-white text-[#8AC909] px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-black"
+          >
+            <Download className="w-6 h-6" />
+            Download Organogram
+          </button>
+        </div>
+
+        {/* Hidden organogram for download generation */}
+        <div className="fixed -left-[9999px] top-0">
+          <div ref={chartRef} className="bg-[rgb(138,201,9)] p-16">
+            <div className="min-w-[1400px] flex flex-col items-center gap-16">
+              {/* Top Section */}
+              <div className="w-full flex justify-center">
+                <div className="w-full max-w-6xl">
+                  <div className="grid grid-cols-[auto_minmax(140px,220px)_minmax(520px,1fr)] gap-x-0 gap-y-12 items-center">
+                    <div className="w-[230px] h-[82px] rounded-xl bg-[#1D4ED8] text-white px-6 text-center font-semibold shadow-md border-2 border-black flex items-center justify-center lg:mr-6">
+                      Board of Trustees
+                    </div>
+                    <div className="w-full h-0.5 bg-black relative lg:-mr-4">
+                      <span className="absolute left-0 -top-2 border-y-[7px] border-y-transparent border-l-[14px] border-l-black rotate-180" />
+                    </div>
+                    <div className="row-span-2 relative">
+                      <div className="relative bg-[#d1d5db] border-2 border-black rounded-[32px] px-10 py-10 text-center shadow-xl w-full min-w-[520px] min-h-[260px] flex flex-col justify-center">
+                        <svg
+                          className="absolute inset-0 w-full h-full pointer-events-none"
+                          viewBox="0 0 100 100"
+                          preserveAspectRatio="none"
+                        >
+                          <polyline
+                            points="0,20 55,20 55,50 70,50"
+                            fill="none"
+                            stroke="black"
+                            strokeWidth="2.5"
+                          />
+                          <polyline
+                            points="0,80 55,80 55,50 70,50"
+                            fill="none"
+                            stroke="black"
+                            strokeWidth="2.5"
+                          />
+                        </svg>
+                        <p className="text-2xl font-bold text-black tracking-wide uppercase relative z-10">
+                          General Assembly
+                        </p>
+                        <div className="mt-8 flex justify-center relative z-10">
+                          <div className="w-56 rounded-lg border-2 border-black bg-white px-6 py-3 font-semibold text-black">
+                            Advisors
+                          </div>
+                        </div>
                       </div>
+                    </div>
+                    <div className="w-[230px] h-[82px] rounded-xl bg-[#22C55E] text-white px-6 text-center font-semibold shadow-md border-2 border-black flex items-center justify-center lg:mr-6">
+                      Executive Director
+                    </div>
+                    <div className="w-full h-0.5 bg-black relative lg:-mr-4">
+                      <span className="absolute left-0 -top-2 border-y-[7px] border-y-transparent border-l-[14px] border-l-black rotate-180" />
                     </div>
                   </div>
                 </div>
-                <div className="w-[230px] h-[82px] rounded-xl bg-[#22C55E] text-white px-6 text-center font-semibold shadow-md border-2 border-black flex items-center justify-center lg:mr-6">
-                  Executive Director
+              </div>
+
+              {/* Connector from General Assembly to Head of Operations */}
+              <div className="w-full max-w-6xl flex justify-center">
+                <div className="h-8 w-0.5 bg-black" />
+              </div>
+
+              {/* Head of Operations + Managers */}
+              <div className="w-full max-w-6xl mx-auto">
+                <div className="flex flex-col items-center gap-6">
+                  <div className="h-6 w-0.5 bg-black" />
+                  <div className="w-full max-w-[300px] rounded-xl bg-[#F47F1F] text-white px-6 py-4 text-center font-semibold shadow-md border-2 border-black">
+                    Head of Operations
+                  </div>
+                  <div className="h-6 w-0.5 bg-black" />
                 </div>
-                <div className="w-full h-0.5 bg-black relative lg:-mr-4">
-                  <span className="absolute left-0 -top-2 border-y-[7px] border-y-transparent border-l-[14px] border-l-black rotate-180" />
+
+                <div className="relative w-full mt-4">
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-black" />
+                  <div className="grid grid-cols-6 gap-10 pt-6">
+                    {managerStructure.map((manager) => (
+                      <ManagerColumn key={manager.title} {...manager} />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Connector from General Assembly to Head of Operations */}
-          <div className="w-full max-w-6xl flex justify-center">
-            <div className="h-8 w-0.5 bg-black" />
-          </div>
-
-          {/* Head of Operations + Managers */}
-          <div className="w-full max-w-6xl mx-auto">
-            <div className="flex flex-col items-center gap-6">
-              <div className="h-6 w-0.5 bg-black" />
-              <div className="w-full max-w-[300px] rounded-xl bg-[#F47F1F] text-white px-6 py-4 text-center font-semibold shadow-md border-2 border-black">
-                Head of Operations
-              </div>
-              <div className="h-6 w-0.5 bg-black" />
-            </div>
-
-            <div className="relative w-full mt-4">
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-black" />
-              <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-10 pt-6">
-                {managerStructure.map((manager) => (
-                  <ManagerColumn key={manager.title} {...manager} />
-                ))}
-              </div>
-            </div>
-          </div>
           </div>
         </div>
       </div>
