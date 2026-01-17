@@ -10,6 +10,7 @@ import Activities from '@/components/Activities';
 import Organogram from '@/components/Organogram';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import PartnersSection from '@/components/PartnersSection.jsx';
 
 const App: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Activities />
         <Organogram />
         <Contact />
+        <PartnersSection />
       </main>
       <Footer />
     </div>
