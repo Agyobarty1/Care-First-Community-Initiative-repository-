@@ -14,7 +14,7 @@ export const navigationItems: NavigationItem[] = [
 export const teamMembers: TeamMember[] = [
   { id: '1', name: 'Bartholomew Agyo', position: 'Executive Director', initials: 'BA', image: '/assets/baty.png'},
   { id: '2', name: 'Kabiru Sodiq', position: 'Head of Programs', initials: 'KS', image: '/assets/kabiru.jpg' },
-  { id: '3', name: 'Kemi Amina Abdullazeez', position: 'Head Admin & HR', initials: 'KA', image: '' },
+  { id: '3', name: 'Fatima Abdulrahman', position: 'Head Admin & HR', initials: 'KA', image: '' },
   { id: '4', name: 'Pwol Kim Dung', position: 'Head Grants, Partnership & Consortium', initials: 'KD', image: '/assets/kim.jpeg' },
   { id: '5', name: 'Felix Terwase Tsebee', position: 'Head Monitoring, Evaluation, Accountability & Learning', initials: 'FT', image: '/assets/felix.jpg' },
   { id: '6', name: 'Moses Tanko', position: 'Head Finance & Operations', initials: 'MT', image: '/assets/tko.png' },

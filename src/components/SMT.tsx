@@ -31,7 +31,7 @@ const SMT: React.FC = () => {
                 mx-auto mb-6 group-hover:scale-105 transition-transform duration-200 shadow-lg overflow-hidden"
               >
                 <img
-                  src={member.image || '/assets/kemi.jpg'}
+                  src={member.image || '/assets/fatima.jpeg'}
                   alt={member.name}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
                 />
