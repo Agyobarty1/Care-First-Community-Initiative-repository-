@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
               
               <div className="flex space-x-4">
                 <a 
-                  href="https://web.facebook.com/profile.php?id=61582939260043" 
+                  href="https://web.facebook.com/profile.php?id=61587346564234" 
                   className="w-10 h-10 bg-brand-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
                   aria-label="Facebook"
                 >
