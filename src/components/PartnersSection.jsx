@@ -72,17 +72,17 @@ const partners = [
   {
     logo: '/assets/nhf.jpeg',
     name: 'NHF',
-    slogan: 'Building healthier communities',
+    slogan: '#InvestInHumanity',
   },
   {
     logo: '/assets/prodigy.jpeg',
     name: 'Prodigy',
-    slogan: 'Excellence in innovation',
+    slogan: '',
   },
   {
     logo: '/assets/wfp.jpeg',
     name: 'WFP',
-    slogan: 'Fighting hunger worldwide',
+    slogan: 'Saving Lives, Changing Lives',
   },
 ];
 
