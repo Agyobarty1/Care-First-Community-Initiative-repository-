@@ -7,7 +7,15 @@ import Programs from '@/components/Programs';
 import CoreValues from '@/components/CoreValues';
 import SMT from '@/components/SMT';
 import Activities from '@/components/Activities';
+import Impact from '@/components/Impact';
 import Organogram from '@/components/Organogram';
+import News from '@/components/News';
+import Reports from '@/components/Reports';
+import Publications from '@/components/Publications';
+import Gallery from '@/components/Gallery';
+import WorkWithUs from '@/components/WorkWithUs';
+import BusinessOpportunities from '@/components/BusinessOpportunities';
+import TendersCareers from '@/components/TendersCareers';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import PartnersSection from '@/components/PartnersSection.jsx';
@@ -20,11 +28,19 @@ const App: React.FC = () => {
         <Hero />
         <MissionVisionMandate />
         <About />
-        <Programs />
         <CoreValues />
         <SMT />
-        <Activities />
         <Organogram />
+        <Programs />
+        <Activities />
+        <Impact />
+        <News />
+        <Reports />
+        <Publications />
+        <Gallery />
+        <WorkWithUs />
+        <BusinessOpportunities />
+        <TendersCareers />
         <Contact />
         <PartnersSection />
       </main>

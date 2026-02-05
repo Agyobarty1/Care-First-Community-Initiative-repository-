@@ -2,22 +2,62 @@ import { TeamMember, Program, Activity, ContactInfo, CoreValue, NavigationItem }
 
 export const navigationItems: NavigationItem[] = [
   { id: 'home', label: 'Home', href: '#home' },
-  { id: 'about', label: 'About', href: '#about' },
-  { id: 'programs', label: 'Programs', href: '#programs' },
-  { id: 'values', label: 'Values', href: '#values' },
-  { id: 'smt', label: 'SMT', href: '#smt' },
-  { id: 'activities', label: 'Activities', href: '#activities' },
-  { id: 'organogram', label: 'Organogram', href: '#organogram' },
+  { 
+    id: 'about', 
+    label: 'About Us', 
+    href: '#about-cfci',
+    hasDropdown: true,
+    dropdownItems: [
+      { id: 'about-cfci', label: 'About CFCI', href: '#about-cfci' },
+      { id: 'our-values', label: 'Our Values', href: '#our-values' },
+      { id: 'smt', label: 'Senior Management Team', href: '#smt' },
+      { id: 'organogram', label: 'Organogram', href: '#organogram' },
+    ]
+  },
+  { 
+    id: 'what-we-do', 
+    label: 'What We Do', 
+    href: '#our-work',
+    hasDropdown: true,
+    dropdownItems: [
+      { id: 'our-work', label: 'Our Work', href: '#our-work' },
+      { id: 'activities', label: 'Activities', href: '#activities' },
+      { id: 'impact', label: 'Impact', href: '#impact' },
+    ]
+  },
+  { 
+    id: 'resources', 
+    label: 'Resources', 
+    href: '#news',
+    hasDropdown: true,
+    dropdownItems: [
+      { id: 'news', label: 'News', href: '#news' },
+      { id: 'reports', label: 'Reports', href: '#reports' },
+      { id: 'publications', label: 'Publications', href: '#publications' },
+      { id: 'gallery', label: 'Gallery', href: '#gallery' },
+    ]
+  },
+  { 
+    id: 'opportunities', 
+    label: 'Opportunities', 
+    href: '#work-with-us',
+    hasDropdown: true,
+    dropdownItems: [
+      { id: 'work-with-us', label: 'Work With Us', href: '#work-with-us' },
+      { id: 'business-opportunities', label: 'Business Opportunities', href: '#business-opportunities' },
+      { id: 'tenders-careers', label: 'Tenders & Careers', href: '#tenders-careers' },
+    ]
+  },
   { id: 'contact', label: 'Contact', href: '#contact' },
 ];
 
 export const teamMembers: TeamMember[] = [
-  { id: '1', name: 'Bartholomew Agyo', position: 'Executive Director', initials: 'BA', image: '/assets/baty.png'},
+  { id: '1', name: 'Bartholomew Agyo', position: 'Executive Director', initials: 'BA', image: '/assets/newbathy.jpeg'},
   { id: '2', name: 'Kabiru Sodiq', position: 'Head of Programs', initials: 'KS', image: '/assets/kabiru.jpg' },
   { id: '3', name: 'Fatima Abdulrahman', position: 'Head Admin & HR', initials: 'KA', image: '' },
-  { id: '4', name: 'Pwol Kim Dung', position: 'Head Grants, Partnership & Consortium', initials: 'KD', image: '/assets/kim.jpeg' },
+  { id: '4', name: 'Pwol Kim Dung', position: 'Head Grants, Partnership & Consortium', initials: 'KD', image: '/assets/newkim.jpeg' },
   { id: '5', name: 'Felix Terwase Tsebee', position: 'Head Monitoring, Evaluation, Accountability & Learning', initials: 'FT', image: '/assets/felix.jpg' },
-  { id: '6', name: 'Moses Tanko', position: 'Head Finance & Operations', initials: 'MT', image: '/assets/tko.png' },
+  { id: '6', name: 'Moses Tanko', position: 'Head Finance & Operations', initials: 'MT', image: '/assets/newtanko.jpeg' },
   { id: '8', name: 'Esther Omojoh Ogah', position: 'Gender Based Violence & Protection Expert', initials: 'EO', image: '/assets/Ogah.jpg' },
 ];
 

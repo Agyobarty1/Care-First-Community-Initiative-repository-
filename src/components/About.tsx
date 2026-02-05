@@ -9,14 +9,14 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-[rgb(138,201,9)]">
+    <section id="about-cfci" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-6">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                About Us
+                About CFCI
               </h2>
               <div className="space-y-4 text-white leading-relaxed">
                 <p>

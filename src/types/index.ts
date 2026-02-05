@@ -39,5 +39,11 @@ export interface NavigationItem {
   id: string;
   label: string;
   href: string;
+  hasDropdown?: boolean;
+  dropdownItems?: {
+    id: string;
+    label: string;
+    href: string;
+  }[];
 }
 

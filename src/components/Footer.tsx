@@ -5,11 +5,19 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Programs', href: '#programs' },
-    { label: 'Values', href: '#values' },
-    { label: 'SMT', href: '#smt' },
+    { label: 'About CFCI', href: '#about-cfci' },
+    { label: 'Our Values', href: '#our-values' },
+    { label: 'Senior Management Team', href: '#smt' },
+    { label: 'Our Work', href: '#our-work' },
     { label: 'Activities', href: '#activities' },
+    { label: 'Impact', href: '#impact' },
+    { label: 'News', href: '#news' },
+    { label: 'Reports', href: '#reports' },
+    { label: 'Publications', href: '#publications' },
+    { label: 'Gallery', href: '#gallery' },
+    { label: 'Work With Us', href: '#work-with-us' },
+    { label: 'Business Opportunities', href: '#business-opportunities' },
+    { label: 'Tenders & Careers', href: '#tenders-careers' },
     { label: 'Contact', href: '#contact' },
   ];
 

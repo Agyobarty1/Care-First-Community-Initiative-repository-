@@ -79,15 +79,15 @@ const Programs: React.FC = () => {
   };
 
   return (
-    <section id="programs" className="section-padding bg-[rgb(138,201,9)]">
+    <section id="our-work" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Programs & Focus Areas
+            Our Work
           </h2>
           <p className="text-lg text-white max-w-3xl mx-auto">
             Our comprehensive approach covers multiple sectors to address the diverse needs 
-            of vulnerable communities and create sustainable impact.
+            of vulnerable communities and create sustainable impact across Nigeria.
           </p>
         </div>
 
@@ -117,10 +117,10 @@ const Programs: React.FC = () => {
         <div className="mt-16 text-center">
           <div className="bg-[rgb(138,201,9)] rounded-2xl p-8 border border-white/20">
             <h3 className="text-xl font-bold text-white mb-4">
-              Interested in Our Programs?
+              Interested in Our Work?
             </h3>
             <p className="text-white mb-6 max-w-2xl mx-auto">
-              Learn more about how we implement these programs and their impact on communities across Nigeria.
+              Learn more about how we implement our programs and their impact on communities across Nigeria.
             </p>
             <a 
               href="#contact" 

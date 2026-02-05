@@ -50,11 +50,11 @@ const CoreValues: React.FC = () => {
   };
 
   return (
-    <section id="values" className="section-padding bg-[rgb(138,201,9)]">
+    <section id="our-values" className="section-padding bg-[rgb(138,201,9)]">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Core Values
+            Our Values
           </h2>
           <p className="text-lg text-white max-w-3xl mx-auto">
             These fundamental principles guide every decision we make and every action we take 
