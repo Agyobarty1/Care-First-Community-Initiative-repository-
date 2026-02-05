@@ -82,7 +82,7 @@ const partners = [
   {
     logo: '/assets/wfp.jpeg',
     name: 'WFP',
-    slogan: 'Saving Lives, Changing Lives',
+    slogan: 'Saving lives, changing lives',
   },
 ];
 
