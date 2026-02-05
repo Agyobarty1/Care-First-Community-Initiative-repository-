@@ -65,19 +65,24 @@ const Slogan = styled(Typography)({
 
 const partners = [
   {
-    logo: '/assets/cfci.jpeg',
-    name: 'CFCI',
-    slogan: 'Helping to make life better',
-  },
-  {
     logo: '/assets/tcdi.jpeg',
     name: 'TCDI',
-    slogan: 'Initiative for Change',
+    slogan: 'Helping to make life better',
   },
   {
     logo: '/assets/nhf.jpeg',
     name: 'NHF',
     slogan: 'Building healthier communities',
+  },
+  {
+    logo: '/assets/prodigy.jpeg',
+    name: 'Prodigy',
+    slogan: 'Excellence in innovation',
+  },
+  {
+    logo: '/assets/wfp.jpeg',
+    name: 'WFP',
+    slogan: 'Fighting hunger worldwide',
   },
 ];
 
