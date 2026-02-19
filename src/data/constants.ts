@@ -32,8 +32,6 @@ export const navigationItems: NavigationItem[] = [
     hasDropdown: true,
     dropdownItems: [
       { id: 'news', label: 'News', href: '#news' },
-      { id: 'reports', label: 'Reports', href: '#reports' },
-      { id: 'publications', label: 'Publications', href: '#publications' },
       { id: 'gallery', label: 'Gallery', href: '#gallery' },
     ]
   },
@@ -44,8 +42,7 @@ export const navigationItems: NavigationItem[] = [
     hasDropdown: true,
     dropdownItems: [
       { id: 'work-with-us', label: 'Work With Us', href: '#work-with-us' },
-      { id: 'business-opportunities', label: 'Business Opportunities', href: '#business-opportunities' },
-      { id: 'tenders-careers', label: 'Tenders & Careers', href: '#tenders-careers' },
+      { id: 'tenders-careers', label: 'Vacancies', href: '#tenders-careers' },
     ]
   },
   { id: 'contact', label: 'Contact', href: '#contact' },
@@ -58,6 +55,7 @@ export const teamMembers: TeamMember[] = [
   { id: '4', name: 'Pwol Kim Dung', position: 'Head Grants, Partnership & Consortium', initials: 'KD', image: '/assets/newkim.jpeg' },
   { id: '5', name: 'Felix Terwase Tsebee', position: 'Head Monitoring, Evaluation, Accountability & Learning', initials: 'FT', image: '/assets/felix.jpg' },
   { id: '6', name: 'Moses Tanko', position: 'Head Finance & Operations', initials: 'MT', image: '/assets/newtanko.jpeg' },
+  { id: '7', name: 'Stephen Terna Kwaghgosor', position: 'Procurement & Logistics Officer', initials: 'ST', image: '/assets/steph.jpeg' },
   { id: '8', name: 'Esther Omojoh Ogah', position: 'Gender Based Violence & Protection Expert', initials: 'EO', image: '/assets/Ogah.jpg' },
 ];
 

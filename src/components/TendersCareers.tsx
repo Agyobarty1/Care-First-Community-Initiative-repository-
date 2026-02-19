@@ -1,76 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const TendersCareers: React.FC = () => {
-  const tenders = [
-    {
-      id: '1',
-      title: 'Supply of Food Items',
-      reference: 'CFCI/TND/2024/001',
-      category: 'Procurement',
-      deadline: 'Coming Soon',
-      status: 'Upcoming',
-      description: 'Supply of assorted food items for food security programs in Borno State.'
-    },
-    {
-      id: '2',
-      title: 'Construction of WASH Facilities',
-      reference: 'CFCI/TND/2024/002',
-      category: 'Construction',
-      deadline: 'Coming Soon',
-      status: 'Upcoming',
-      description: 'Construction and installation of water points and sanitation facilities.'
-    },
-    {
-      id: '3',
-      title: 'Consulting Services - M&E',
-      reference: 'CFCI/TND/2024/003',
-      category: 'Consulting',
-      deadline: 'Coming Soon',
-      status: 'Upcoming',
-      description: 'Monitoring and evaluation services for ongoing humanitarian programs.'
-    }
-  ];
+  const [selectedCareer, setSelectedCareer] = useState<string | null>(null);
 
   const careers = [
     {
       id: '1',
-      title: 'Program Officer - Food Security',
-      location: 'Maiduguri, Borno State',
-      type: 'Full-time',
-      level: 'Mid-level',
-      deadline: 'Coming Soon',
-      status: 'Upcoming',
-      description: 'Lead implementation of food security and nutrition programs in crisis-affected communities.'
-    },
-    {
-      id: '2',
-      title: 'WASH Specialist',
-      location: 'Adamawa State',
-      type: 'Full-time',
-      level: 'Senior',
-      deadline: 'Coming Soon',
-      status: 'Upcoming',
-      description: 'Design and oversee WASH interventions ensuring access to clean water and sanitation.'
-    },
-    {
-      id: '3',
-      title: 'Finance Officer',
-      location: 'Maiduguri, Borno State',
-      type: 'Full-time',
-      level: 'Mid-level',
-      deadline: 'Coming Soon',
-      status: 'Upcoming',
-      description: 'Manage financial operations, budgeting, and reporting for humanitarian programs.'
-    },
-    {
-      id: '4',
-      title: 'Protection Officer',
-      location: 'Yobe State',
+      title: 'Internal Compliance Officer',
+      location: 'Maiduguri',
       type: 'Contract',
       level: 'Mid-level',
-      deadline: 'Coming Soon',
-      status: 'Upcoming',
-      description: 'Implement protection activities including GBV prevention and response services.'
+      deadline: '27th February 2026',
+      status: 'Open',
+      description: 'Ensure organizational compliance with internal policies, donor requirements, and applicable laws. Conduct internal audits, risk assessments, and promote accountability across all operations.',
+      requirements: [
+        'Bachelor\'s degree in Law, Accounting, Finance, Business Administration, or related field',
+        'Minimum 3 years experience in compliance, audit, risk management, or internal control',
+        'Strong knowledge of compliance frameworks and internal control systems',
+        'Excellent analytical, reporting, and documentation skills',
+        'High level of integrity, confidentiality, and professionalism'
+      ],
+      responsibilities: [
+        'Ensure compliance with organizational policies and regulatory requirements',
+        'Monitor adherence to donor, financial, procurement, and operational guidelines',
+        'Conduct internal compliance reviews, audits, and spot checks',
+        'Identify compliance risks and recommend corrective actions',
+        'Prepare compliance reports and submit findings to management',
+        'Support staff through compliance guidance, training, and awareness sessions'
+      ],
+      applyLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeIeNxWvskjYqd-Rmr_X58d5eKjmfnSm5xO5DuIAAq5yF8Nsg/viewform?usp=publish-editor',
+      email: 'hrofficer@cfci-ng.org'
     }
   ];
 
@@ -79,67 +38,11 @@ const TendersCareers: React.FC = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Tenders & Careers
+            Careers
           </h2>
           <p className="text-lg text-white max-w-3xl mx-auto">
-            Explore current tender opportunities and career openings at Care First Community Initiative.
+            Explore career openings at Care First Community Initiative.
           </p>
-        </div>
-
-        {/* Tenders Section */}
-        <div className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl font-bold text-white">
-              Current Tenders
-            </h3>
-            <span className="bg-white text-primary-700 px-4 py-2 rounded-full text-sm font-semibold">
-              {tenders.length} Opportunities
-            </span>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {tenders.map((tender, index) => (
-              <div 
-                key={tender.id}
-                className="card p-6 group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-xs font-semibold text-primary-700 bg-primary-50 px-3 py-1 rounded-full">
-                    {tender.category}
-                  </span>
-                  <span className="text-xs font-semibold text-secondary-700 bg-secondary-50 px-3 py-1 rounded-full">
-                    {tender.status}
-                  </span>
-                </div>
-
-                <h4 className="text-lg font-bold text-brand-900 mb-2 group-hover:text-primary-700 transition-colors">
-                  {tender.title}
-                </h4>
-
-                <p className="text-sm text-brand-600 mb-3 font-mono">
-                  Ref: {tender.reference}
-                </p>
-
-                <p className="text-brand-700 text-sm leading-relaxed mb-4">
-                  {tender.description}
-                </p>
-
-                <div className="pt-4 border-t border-brand-200 space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-brand-600 font-medium">Deadline:</span>
-                    <span className="text-brand-900 font-semibold">{tender.deadline}</span>
-                  </div>
-                  <button 
-                    disabled
-                    className="w-full btn bg-brand-100 text-brand-400 cursor-not-allowed text-sm py-2"
-                  >
-                    View Details
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Careers Section */}
@@ -161,16 +64,8 @@ const TendersCareers: React.FC = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xs font-semibold text-primary-700 bg-primary-50 px-3 py-1 rounded-full">
-                      {career.type}
-                    </span>
-                    <span className="text-xs font-semibold text-brand-700 bg-brand-100 px-3 py-1 rounded-full">
-                      {career.level}
-                    </span>
-                  </div>
                   <span className="text-xs font-semibold text-secondary-700 bg-secondary-50 px-3 py-1 rounded-full">
-                    {career.status}
+                    View Details
                   </span>
                 </div>
 
@@ -196,75 +91,140 @@ const TendersCareers: React.FC = () => {
                     <span className="text-brand-900 font-semibold">{career.deadline}</span>
                   </div>
                   <button 
-                    disabled
-                    className="w-full btn bg-brand-100 text-brand-400 cursor-not-allowed text-sm py-2"
+                    onClick={() => setSelectedCareer(selectedCareer === career.id ? null : career.id)}
+                    className="w-full btn bg-primary-600 hover:bg-primary-700 text-white text-sm py-2 transition-colors duration-200"
                   >
-                    Apply Now
+                    {selectedCareer === career.id ? 'Hide Details' : 'View Full Details'}
                   </button>
                 </div>
+
+                {/* Expanded Details Section */}
+                {selectedCareer === career.id && (
+                  <div className="mt-6 pt-6 border-t border-brand-200 animate-fade-in">
+                    <div className="space-y-6">
+                      {/* Job Summary */}
+                      <div>
+                        <h5 className="text-lg font-bold text-brand-900 mb-3">Job Summary</h5>
+                        <p className="text-brand-700 text-sm leading-relaxed">
+                          We are seeking a detail-oriented and highly ethical Internal Compliance Officer to ensure that the organization operates in full compliance with internal policies, donor requirements, and applicable laws and regulations. The role is critical in promoting accountability, transparency, and risk management across all operations.
+                        </p>
+                      </div>
+
+                      {/* Key Responsibilities */}
+                      <div>
+                        <h5 className="text-lg font-bold text-brand-900 mb-3">Key Responsibilities</h5>
+                        <ul className="space-y-2">
+                          {career.responsibilities?.map((resp, idx) => (
+                            <li key={idx} className="flex items-start space-x-2 text-brand-700 text-sm">
+                              <span className="text-primary-600 mt-1">•</span>
+                              <span>{resp}</span>
+                            </li>
+                          ))}
+                          <li className="flex items-start space-x-2 text-brand-700 text-sm">
+                            <span className="text-primary-600 mt-1">•</span>
+                            <span>Investigate reported non-compliance issues and follow up on resolutions</span>
+                          </li>
+                          <li className="flex items-start space-x-2 text-brand-700 text-sm">
+                            <span className="text-primary-600 mt-1">•</span>
+                            <span>Liaise with auditors, regulators, and management when required</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Qualifications & Requirements */}
+                      <div>
+                        <h5 className="text-lg font-bold text-brand-900 mb-3">Qualifications & Requirements</h5>
+                        <ul className="space-y-2">
+                          {career.requirements?.map((req, idx) => (
+                            <li key={idx} className="flex items-start space-x-2 text-brand-700 text-sm">
+                              <span className="text-primary-600 mt-1">•</span>
+                              <span>{req}</span>
+                            </li>
+                          ))}
+                          <li className="flex items-start space-x-2 text-brand-700 text-sm">
+                            <span className="text-primary-600 mt-1">•</span>
+                            <span>Strong communication and interpersonal skills</span>
+                          </li>
+                          <li className="flex items-start space-x-2 text-brand-700 text-sm">
+                            <span className="text-primary-600 mt-1">•</span>
+                            <span>Ability to work independently and meet deadlines</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Desirable Skills */}
+                      <div>
+                        <h5 className="text-lg font-bold text-brand-900 mb-3">Desirable Skills</h5>
+                        <ul className="space-y-2">
+                          <li className="flex items-start space-x-2 text-brand-700 text-sm">
+                            <span className="text-primary-600 mt-1">•</span>
+                            <span>Experience working with NGOs, development projects, or donor-funded programs</span>
+                          </li>
+                          <li className="flex items-start space-x-2 text-brand-700 text-sm">
+                            <span className="text-primary-600 mt-1">•</span>
+                            <span>Knowledge of financial and procurement compliance standards</span>
+                          </li>
+                          <li className="flex items-start space-x-2 text-brand-700 text-sm">
+                            <span className="text-primary-600 mt-1">•</span>
+                            <span>Professional certifications (ICAN, ACCA, CIA, or related) are an added advantage</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Employment Details */}
+                      <div className="bg-primary-50 rounded-lg p-4">
+                        <h5 className="text-lg font-bold text-brand-900 mb-3">Employment Details</h5>
+                        <div className="grid grid-cols-2 gap-4 text-sm">
+                          <div>
+                            <span className="text-brand-600 font-medium">Employment Type:</span>
+                            <p className="text-brand-900">Contract (Possible Extension)</p>
+                          </div>
+                          <div>
+                            <span className="text-brand-600 font-medium">Location:</span>
+                            <p className="text-brand-900">{career.location}</p>
+                          </div>
+                          <div>
+                            <span className="text-brand-600 font-medium">Reports To:</span>
+                            <p className="text-brand-900">Program Manager / Executive Director</p>
+                          </div>
+                          <div>
+                            <span className="text-brand-600 font-medium">Deadline:</span>
+                            <p className="text-brand-900">{career.deadline}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* How to Apply */}
+                      <div className="bg-secondary-50 rounded-lg p-4">
+                        <h5 className="text-lg font-bold text-brand-900 mb-3">How to Apply</h5>
+                        <p className="text-brand-700 text-sm leading-relaxed mb-4">
+                          Interested and qualified candidates should submit their CV and cover letter to{' '}
+                          <a href={`mailto:${career.email}`} className="text-primary-700 hover:text-primary-800 font-semibold">
+                            {career.email}
+                          </a>
+                          {' '}with the subject line: <span className="font-semibold">"Application for Internal Compliance Officer"</span>
+                        </p>
+                        <p className="text-brand-700 text-sm mb-4">
+                          Alternatively, you can apply online by clicking the button below:
+                        </p>
+                        <a 
+                          href={career.applyLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full btn bg-primary-600 hover:bg-primary-700 text-white text-sm py-3 inline-block text-center transition-colors duration-200 font-semibold"
+                        >
+                          Apply Now Online
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
         </div>
 
-        {/* Information Box */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 border border-primary-200">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <div>
-                <h4 className="text-lg font-bold text-brand-900 mb-3">
-                  Tender Information
-                </h4>
-                <p className="text-brand-700 text-sm leading-relaxed mb-4">
-                  All tender documents will be available for download when published. Interested bidders 
-                  should regularly check this page for updates and ensure compliance with all requirements.
-                </p>
-                <a 
-                  href="mailto:bagyo@cfcinitiative.org" 
-                  className="text-primary-700 hover:text-primary-800 font-medium text-sm flex items-center space-x-2"
-                >
-                  <span>Contact Procurement</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
 
-          <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 border border-primary-200">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg className="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m8 0h-8m8 0v2m-8-2v2m0 0H6a2 2 0 00-2 2v6a2 2 0 002 2h12a2 2 0 002-2V8a2 2 0 00-2-2h-2" />
-                </svg>
-              </div>
-              <div>
-                <h4 className="text-lg font-bold text-brand-900 mb-3">
-                  Career Information
-                </h4>
-                <p className="text-brand-700 text-sm leading-relaxed mb-4">
-                  We are an equal opportunity employer committed to diversity and inclusion. Join our team 
-                  of dedicated professionals making a difference in humanitarian response across Nigeria.
-                </p>
-                <a 
-                  href="mailto:bagyo@cfcinitiative.org" 
-                  className="text-primary-700 hover:text-primary-800 font-medium text-sm flex items-center space-x-2"
-                >
-                  <span>Contact HR</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
