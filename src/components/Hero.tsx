@@ -1,6 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero: React.FC = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const heroImages = [
+    '/assets/activity-5.png',
+    '/assets/cfcio.jpeg',
+    '/assets/cfciq.jpeg'
+  ];
+
+  const imageAlts = [
+    'Community empowerment and humanitarian assistance',
+    'CFCI team and community work',
+    'CFCI humanitarian activities and impact'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      
+      setTimeout(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+        setIsTransitioning(false);
+      }, 500); // Fade out duration
+      
+    }, 4000); // Total time per image (4 seconds)
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-[rgb(138,201,9)]">
       {/* Background Pattern */}
@@ -42,14 +71,46 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image Marquee */}
           <div className="relative animate-slide-up">
             <div className="relative">
-              <img
-                src="/assets/activity-5.png"
-                alt="Community empowerment and humanitarian assistance"
-                className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
-              />
+              <div className="relative w-full h-[500px] overflow-hidden rounded-2xl shadow-2xl">
+                {heroImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={imageAlts[index]}
+                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
+                      index === currentImageIndex && !isTransitioning
+                        ? 'opacity-100 translate-x-0' 
+                        : 'opacity-0 -translate-x-full'
+                    }`}
+                  />
+                ))}
+              </div>
+              
+              {/* Image indicators */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {heroImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setIsTransitioning(true);
+                      setTimeout(() => {
+                        setCurrentImageIndex(index);
+                        setIsTransitioning(false);
+                      }, 250);
+                    }}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentImageIndex 
+                        ? 'bg-white w-8' 
+                        : 'bg-white/50 hover:bg-white/75'
+                    }`}
+                    aria-label={`Go to image ${index + 1}`}
+                  />
+                ))}
+              </div>
+              
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
             </div>

@@ -8,127 +8,88 @@ interface GalleryItem {
   location: string;
   date: string;
   placeholder: string;
+  image: string;
 }
 
 const Gallery: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('WASH');
 
-  const categories = ['All', 'Food Security', 'WASH', 'Education', 'Health', 'Protection', 'Community Engagement'];
+  const categories = ['WASH'];
 
   const galleryItems: GalleryItem[] = [
     {
       id: '1',
-      title: 'Food Distribution Program',
-      description: 'CFCI team distributing food packages to vulnerable families in displaced communities, ensuring access to nutritious meals.',
-      category: 'Food Security',
-      location: 'Borno State',
-      date: '2024',
-      placeholder: 'Food Distribution'
+      title: 'Latrine Assessment - Ajari IDPs Camp',
+      description: 'Comprehensive evaluation of latrine facilities in Ajari IDPs Camp, Gwoza LGA. Assessment revealed 4 functional latrine blocks requiring dislodgement to maintain proper sanitation standards for displaced communities.',
+      category: 'WASH',
+      location: 'Gwoza LGA - Ajari Camp',
+      date: 'January 10, 2026',
+      placeholder: 'Latrine Assessment',
+      image: '/assets/wash1.jpeg'
     },
     {
       id: '2',
-      title: 'Clean Water Access Initiative',
-      description: 'Installation of water points providing clean and safe drinking water to communities affected by water scarcity.',
+      title: 'Functional Latrine Facilities',
+      description: 'Documenting functional latrine blocks serving displaced communities. These facilities represent critical infrastructure maintaining hygiene and dignity for IDPs in Gwoza Wakane Ward.',
       category: 'WASH',
-      location: 'Adamawa State',
-      date: '2024',
-      placeholder: 'Water Access'
+      location: 'Gwoza LGA - Ajari Camp',
+      date: 'January 10, 2026',
+      placeholder: 'Functional Latrines',
+      image: '/assets/wash2.jpeg'
     },
     {
       id: '3',
-      title: 'Children Education Support',
-      description: 'Providing educational materials and learning support to children in underserved communities to promote quality education.',
-      category: 'Education',
-      location: 'Yobe State',
-      date: '2024',
-      placeholder: 'Education'
+      title: 'WASH Assessment - 20 Housing Camp',
+      description: 'Large-scale WASH facility assessment covering 36 latrine blocks across four zones in 20 Housing IDPs Camp, serving over 5,400 households with critical sanitation infrastructure.',
+      category: 'WASH',
+      location: 'Gwoza LGA - 20 Housing Camp',
+      date: 'February 11, 2026',
+      placeholder: 'Camp Assessment',
+      image: '/assets/wash3.jpeg'
     },
     {
       id: '4',
-      title: 'Health Awareness Campaign',
-      description: 'Community health workers conducting awareness sessions on hygiene practices and disease prevention in rural areas.',
-      category: 'Health',
-      location: 'Borno State',
-      date: '2024',
-      placeholder: 'Health Campaign'
+      title: 'Zone-Based Sanitation Survey',
+      description: 'Systematic assessment of latrine conditions across Zone A, B, C, and D in 20 Housing IDPs Camp, identifying maintenance priorities and functionality status for optimal WASH service delivery.',
+      category: 'WASH',
+      location: 'Gwoza LGA - 20 Housing Camp',
+      date: 'February 11, 2026',
+      placeholder: 'Zone Survey',
+      image: '/assets/wash4.jpeg'
     },
     {
       id: '5',
-      title: 'Women Empowerment Workshop',
-      description: 'Skills training and empowerment sessions for women, focusing on livelihood development and economic independence.',
-      category: 'Protection',
-      location: 'Jere LGA',
-      date: '2024',
-      placeholder: 'Women Empowerment'
+      title: 'Partially Damaged Latrine Documentation',
+      description: 'Assessment findings showing 12 partially damaged latrine blocks requiring rehabilitation. These facilities highlight the need for ongoing maintenance to ensure sustainable WASH services.',
+      category: 'WASH',
+      location: 'Gwoza LGA - 20 Housing Camp',
+      date: 'February 11, 2026',
+      placeholder: 'Damage Assessment',
+      image: '/assets/wash5.jpeg'
     },
     {
       id: '6',
-      title: 'Community Dialogue Session',
-      description: 'Facilitating community dialogues to promote peace, social cohesion, and conflict resolution among diverse groups.',
-      category: 'Community Engagement',
-      location: 'Maiduguri',
-      date: '2024',
-      placeholder: 'Community Dialogue'
+      title: 'Non-Functional Facility Analysis',
+      description: 'Documentation of 10 non-functional latrine blocks requiring immediate attention. This assessment informs prioritization of rehabilitation efforts to restore essential sanitation services.',
+      category: 'WASH',
+      location: 'Gwoza LGA - 20 Housing Camp',
+      date: 'February 11, 2026',
+      placeholder: 'Facility Analysis',
+      image: '/assets/wash6.jpeg'
     },
     {
       id: '7',
-      title: 'Nutrition Screening Program',
-      description: 'Conducting nutrition assessments and providing therapeutic feeding for malnourished children in crisis-affected areas.',
-      category: 'Food Security',
-      location: 'Borno State',
-      date: '2024',
-      placeholder: 'Nutrition Program'
-    },
-    {
-      id: '8',
-      title: 'Hygiene Promotion Activities',
-      description: 'Teaching proper handwashing techniques and hygiene practices to prevent disease transmission in communities.',
+      title: 'Community WASH Impact Documentation',
+      description: 'Visual documentation of WASH program impact on displaced communities. These images capture the real-world implementation of sanitation solutions and their importance for community health and dignity.',
       category: 'WASH',
-      location: 'Adamawa State',
-      date: '2024',
-      placeholder: 'Hygiene Promotion'
-    },
-    {
-      id: '9',
-      title: 'School Rehabilitation Project',
-      description: 'Renovating and equipping schools to create safe and conducive learning environments for children.',
-      category: 'Education',
-      location: 'Yobe State',
-      date: '2024',
-      placeholder: 'School Project'
-    },
-    {
-      id: '10',
-      title: 'Mobile Health Clinic',
-      description: 'Providing primary healthcare services through mobile clinics reaching remote and underserved communities.',
-      category: 'Health',
-      location: 'Borno State',
-      date: '2024',
-      placeholder: 'Mobile Clinic'
-    },
-    {
-      id: '11',
-      title: 'GBV Prevention Training',
-      description: 'Training community members on gender-based violence prevention, response mechanisms, and survivor support.',
-      category: 'Protection',
-      location: 'Maiduguri',
-      date: '2024',
-      placeholder: 'GBV Training'
-    },
-    {
-      id: '12',
-      title: 'Youth Engagement Forum',
-      description: 'Engaging youth in community development activities and providing platforms for their voices to be heard.',
-      category: 'Community Engagement',
-      location: 'Jere LGA',
-      date: '2024',
-      placeholder: 'Youth Forum'
+      location: 'Gwoza LGA',
+      date: 'January-February 2026',
+      placeholder: 'Community Impact',
+      image: '/assets/wash7.jpeg'
     }
   ];
 
-  const filteredItems = selectedCategory === 'All' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === selectedCategory);
+  const filteredItems = galleryItems.filter(item => item.category === selectedCategory);
 
   return (
     <section id="gallery" className="section-padding bg-[rgb(138,201,9)]">
@@ -169,29 +130,14 @@ const Gallery: React.FC = () => {
               className="card overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              {/* Image Placeholder */}
+              {/* Image */}
               <div className="relative h-64 bg-gradient-to-br from-primary-200 via-secondary-200 to-brand-200 overflow-hidden">
-                {/* Placeholder Content */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <svg 
-                      className="w-16 h-16 text-white/40 mx-auto mb-3" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={1.5} 
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" 
-                      />
-                    </svg>
-                    <p className="text-white/60 font-semibold text-sm">
-                      {item.placeholder}
-                    </p>
-                  </div>
-                </div>
+                <img 
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
                 
                 {/* Category Badge */}
                 <div className="absolute top-3 left-3">
