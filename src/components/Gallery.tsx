@@ -25,7 +25,7 @@ const Gallery: React.FC = () => {
       location: 'Gwoza LGA - Ajari Camp',
       date: 'January 10, 2026',
       placeholder: 'Latrine Assessment',
-      image: '/assets/wash1.jpeg'
+      image: '/assets/latrine.jpeg'
     },
     {
       id: '2',
@@ -45,7 +45,7 @@ const Gallery: React.FC = () => {
       location: 'Gwoza LGA - 20 Housing Camp',
       date: 'February 11, 2026',
       placeholder: 'Camp Assessment',
-      image: '/assets/wash3.jpeg'
+      image: '/assets/washGwoza.jpeg'
     },
     {
       id: '4',
@@ -65,17 +65,17 @@ const Gallery: React.FC = () => {
       location: 'Gwoza LGA - 20 Housing Camp',
       date: 'February 11, 2026',
       placeholder: 'Damage Assessment',
-      image: '/assets/wash5.jpeg'
+      image: '/assets/partially.jpeg'
     },
     {
       id: '6',
-      title: 'Non-Functional Facility Analysis',
+      title: 'WASH Facility Analysis',
       description: 'Documentation of 10 non-functional latrine blocks requiring immediate attention. This assessment informs prioritization of rehabilitation efforts to restore essential sanitation services.',
       category: 'WASH',
       location: 'Gwoza LGA - 20 Housing Camp',
       date: 'February 11, 2026',
       placeholder: 'Facility Analysis',
-      image: '/assets/wash6.jpeg'
+      image: '/assets/nonfunctional.jpeg'
     },
     {
       id: '7',

@@ -14,16 +14,16 @@ const News: React.FC = () => {
     {
       id: '2',
       title: 'CFCI Launches New Food Security Initiative',
-      date: 'Coming Soon',
+      date: '',
       excerpt: 'Stay tuned for updates on our latest programs and initiatives aimed at improving food security in vulnerable communities.',
       category: 'Program Launch',
-      image: '/assets/activity-1.png',
+      image: '/assets/disability.jpeg',
       featured: false
     },
     {
       id: '3',
       title: 'Community Empowerment Success Stories',
-      date: 'Coming Soon',
+      date: '',
       excerpt: 'Read about the inspiring stories of communities we have supported and the positive changes they are experiencing.',
       category: 'Impact Stories',
       image: '/assets/activity-3.png',
@@ -217,13 +217,6 @@ const News: React.FC = () => {
                 <p className="text-brand-700 leading-relaxed mb-4">
                   {item.excerpt}
                 </p>
-                
-                <button className="text-primary-700 hover:text-primary-800 font-medium text-sm flex items-center space-x-2 group-hover:translate-x-1 transition-transform duration-200">
-                  <span>Read More</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
               </div>
             </div>
           ))}
