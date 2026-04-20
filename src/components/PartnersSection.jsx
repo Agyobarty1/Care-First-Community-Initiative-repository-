@@ -84,6 +84,11 @@ const partners = [
     name: 'WFP',
     slogan: 'Saving lives, changing lives',
   },
+  {
+    logo: '/assets/partners.jpeg',
+    name: 'Partners',
+    slogan: '',
+  },
 ];
 
 const PartnersSection = () => {
