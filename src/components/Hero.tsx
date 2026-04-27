@@ -5,15 +5,47 @@ const Hero: React.FC = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const heroImages = [
-    '/assets/activity-5.png',
-    '/assets/cfcio.jpeg',
-    '/assets/cfciq.jpeg'
+    '/assets/nfi0.jpeg',
+    '/assets/nfi00.jpeg',
+    '/assets/nfi000.jpeg',
+    '/assets/nfi1.jpeg',
+    '/assets/nfi2.jpeg',
+    '/assets/nfi3.jpeg',
+    '/assets/nfi4.jpeg',
+    '/assets/nfi5.jpeg',
+    '/assets/nfi6.jpeg',
+    '/assets/nfi7.jpeg',
+    '/assets/nfi8.jpeg',
+    '/assets/nfi9.jpeg',
+    '/assets/nfi11.jpeg',
+    '/assets/nfi22.jpeg',
+    '/assets/nfi44.jpeg',
+    '/assets/nfi55.jpeg',
+    '/assets/nfi111.jpeg',
+    '/assets/nfi999.jpeg',
+    '/assets/nfi1111.jpeg'
   ];
 
   const imageAlts = [
-    'Community empowerment and humanitarian assistance',
-    'CFCI team and community work',
-    'CFCI humanitarian activities and impact'
+    'NFI humanitarian activity 0',
+    'NFI humanitarian activity 00',
+    'NFI humanitarian activity 000',
+    'NFI humanitarian activity 1',
+    'NFI humanitarian activity 2',
+    'NFI humanitarian activity 3',
+    'NFI humanitarian activity 4',
+    'NFI humanitarian activity 5',
+    'NFI humanitarian activity 6',
+    'NFI humanitarian activity 7',
+    'NFI humanitarian activity 8',
+    'NFI humanitarian activity 9',
+    'NFI humanitarian activity 11',
+    'NFI humanitarian activity 22',
+    'NFI humanitarian activity 44',
+    'NFI humanitarian activity 55',
+    'NFI humanitarian activity 111',
+    'NFI humanitarian activity 999',
+    'NFI humanitarian activity 1111'
   ];
 
   useEffect(() => {
