@@ -143,5 +143,5 @@ Strict configuration with:
 ## 📞 Support
 
 For questions about this website template, please contact:
-- **Email**: bagyo@cfcinitiative.org
+- **Email**: bagyo@cfci-ng.org
 - **Phone**: +234 802 653 3075, +234 703 462 4598

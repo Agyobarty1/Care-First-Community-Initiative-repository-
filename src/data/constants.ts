@@ -111,7 +111,7 @@ export const coreValues: CoreValue[] = [
 
 export const contactInfo: ContactInfo = {
   phone: ['+2348026533075', '+2347034624598'],
-  email: 'bagyo@cfcinitiative.org',
+  email: 'bagyo@cfci-ng.org',
 };
 
 export const organizationInfo = {
