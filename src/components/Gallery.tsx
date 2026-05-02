@@ -14,7 +14,7 @@ interface GalleryItem {
 const Gallery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('WASH');
 
-  const categories = ['WASH'];
+  const categories = ['WASH', 'Logistics and Cluster'];
 
   const galleryItems: GalleryItem[] = [
     {
@@ -86,6 +86,86 @@ const Gallery: React.FC = () => {
       date: 'January-February 2026',
       placeholder: 'Community Impact',
       image: '/assets/wash7.jpeg'
+    },
+    {
+      id: '8',
+      title: '',
+      description: 'Central coordination hub for all logistics operations supporting humanitarian activities. This facility manages supply chain, inventory, and distribution systems for efficient program delivery.',
+      category: 'Logistics and Cluster',
+      location: 'Dikwa',
+      date: 'March 15, 2026',
+      placeholder: 'Operations Center',
+      image: '/assets/log1.jpeg'
+    },
+    {
+      id: '9',
+      title: '',
+      description: 'Comprehensive supply chain operations ensuring timely delivery of essential supplies to affected communities. Includes procurement, storage, and distribution of humanitarian aid materials.',
+      category: 'Logistics and Cluster',
+      location: 'Dikwa',
+      date: 'March 20, 2026',
+      placeholder: 'Supply Chain',
+      image: '/assets/log2.jpeg'
+    },
+    {
+      id: '10',
+      title: '',
+      description: 'Multi-agency coordination meeting with cluster partners for effective response planning. These meetings ensure alignment of logistics activities and resource sharing among humanitarian actors.',
+      category: 'Logistics and Cluster',
+      location: 'Dikwa',
+      date: 'April 5, 2026',
+      placeholder: 'Cluster Meeting',
+      image: '/assets/log3.jpeg'
+    },
+    {
+      id: '11',
+      title: '',
+      description: 'Modern warehouse facility with organized inventory management for humanitarian supplies. Features proper storage conditions, tracking systems, and efficient retrieval processes.',
+      category: 'Logistics and Cluster',
+      location: 'Dikwa',
+      date: 'April 10, 2026',
+      placeholder: 'Warehouse Operations',
+      image: '/assets/log4.jpeg'
+    },
+    {
+      id: '12',
+      title: '',
+      description: 'Vehicle fleet management ensuring reliable transportation for humanitarian operations. Includes maintenance scheduling, route optimization, and driver coordination for field activities.',
+      category: 'Logistics and Cluster',
+      location: 'Dikwa',
+      date: 'April 18, 2026',
+      placeholder: 'Fleet Management',
+      image: '/assets/log5.jpeg'
+    },
+    {
+      id: '13',
+      title: '',
+      description: 'Rapid deployment logistics team responding to emergency situations. This team ensures quick mobilization of resources and personnel for critical humanitarian interventions.',
+      category: 'Logistics and Cluster',
+      location: 'Dikwa',
+      date: 'May 1, 2026',
+      placeholder: 'Emergency Response',
+      image: '/assets/log6.jpeg'
+    },
+    {
+      id: '14',
+      title: '',
+      description: 'Final stage distribution of humanitarian aid to beneficiaries in hard-to-reach areas. This critical phase ensures supplies reach the most vulnerable populations effectively.',
+      category: 'Logistics and Cluster',
+      location: 'Dikwa',
+      date: 'May 8, 2026',
+      placeholder: 'Last Mile Delivery',
+      image: '/assets/log7.jpeg'
+    },
+    {
+      id: '15',
+      title: '',
+      description: 'Additional logistics operation supporting humanitarian activities and community service delivery.',
+      category: 'Logistics and Cluster',
+      location: 'Dikwa',
+      date: 'May 15, 2026',
+      placeholder: 'Additional Operation',
+      image: '/assets/log8.jpeg'
     }
   ];
 
