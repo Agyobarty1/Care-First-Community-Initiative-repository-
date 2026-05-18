@@ -22,6 +22,7 @@ export const navigationItems: NavigationItem[] = [
     dropdownItems: [
       { id: 'our-work', label: 'Our Work', href: '#our-work' },
       { id: 'activities', label: 'Activities', href: '#activities' },
+      { id: 'our-work-in-action', label: 'Our Work in Action', href: '#our-work-in-action' },
       { id: 'impact', label: 'Impact', href: '#impact' },
     ]
   },

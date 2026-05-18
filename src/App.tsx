@@ -7,6 +7,7 @@ import Programs from '@/components/Programs';
 import CoreValues from '@/components/CoreValues';
 import SMT from '@/components/SMT';
 import Activities from '@/components/Activities';
+import VideoSection from '@/components/VideoSection';
 import Impact from '@/components/Impact';
 import Organogram from '@/components/Organogram';
 import News from '@/components/News';
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         <Organogram />
         <Programs />
         <Activities />
+        <VideoSection />
         <Impact />
         <News />
         <Gallery />
